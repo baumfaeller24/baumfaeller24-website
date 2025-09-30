@@ -1,14 +1,1011 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Professionelle Baumfällung und Baumpflege in Berlin & Brandenburg. 12 Jahre Erfahrung, moderne Technik, zuverlässiger Service." />
-    <title>Baumfäller24 - Professionelle Baumfällung in Berlin & Brandenburg</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baumfäller24 - Professionelle Baumfällung & Baumpflege | Transparente Preise</title>
+    <meta name="description" content="Professionelle Baumfällung & Baumpflege mit transparenten Preisen ✓ Kostenlose Beratung ✓ 100% Versicherungsschutz ✓ Jetzt Angebot in 2 Minuten!">
+    <meta name="keywords" content="Baumfällung, Baumpflege, Baumschnitt, Notfall Baumfällung, Preisrechner, Deutschland">
+    <meta name="author" content="Baumfäller24">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://baumfaeller24.de/">
+    <meta property="og:title" content="Baumfäller24 - Professionelle Baumfällung & Baumpflege">
+    <meta property="og:description" content="Transparente Preise, professionelle Ausführung, 100% Versicherungsschutz. Über 5.000 zufriedene Kunden vertrauen uns.">
+    <meta property="og:image" content="https://baumfaeller24.de/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://baumfaeller24.de/">
+    <meta property="twitter:title" content="Baumfäller24 - Professionelle Baumfällung & Baumpflege">
+    <meta property="twitter:description" content="Transparente Preise, professionelle Ausführung, 100% Versicherungsschutz.">
+    <meta property="twitter:image" content="https://baumfaeller24.de/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    
+    <!-- Critical CSS (inline for performance) -->
+    <style>
+        /* Critical above-the-fold CSS */
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;font-size:16px}
+        body{font-family:'Source Sans Pro',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:16px;line-height:1.6;color:#374151;background-color:#fff;overflow-x:hidden}
+        .container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+        .header{background-color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05);position:sticky;top:0;z-index:1000}
+        .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+        .nav-logo img{height:3.75rem;width:auto}
+        .hero{padding:4rem 0;background:linear-gradient(135deg,#f9fafb 0%,#fff 100%)}
+        .hero-content{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+        .hero-title{font-size:3rem;font-weight:700;line-height:1.1;margin-bottom:1.5rem;font-family:'Inter',sans-serif}
+        .btn{display:inline-flex;align-items:center;justify-content:center;padding:.75rem 1.5rem;border:none;border-radius:.5rem;font-family:'Inter',sans-serif;font-size:1rem;font-weight:500;text-decoration:none;cursor:pointer;transition:all .3s ease;gap:.5rem}
+        .btn-primary{background-color:#2d5a27;color:#fff;box-shadow:0 4px 12px rgba(45,90,39,.3)}
+        .btn-emergency{background-color:#ffb000;color:#1f2937;font-weight:600}
+        @media (max-width:768px){.hero-content{grid-template-columns:1fr;gap:3rem;text-align:center}.hero-title{font-size:2rem}}
+    </style>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS (deferred for performance) -->
+    <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Baumfäller24",
+        "description": "Professionelle Baumfällung und Baumpflege mit transparenten Preisen",
+        "url": "https://baumfaeller24.de",
+        "telephone": "+49-800-BAUM-24",
+        "email": "info@baumfaeller24.de",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE"
+        },
+        "serviceArea": {
+            "@type": "Country",
+            "name": "Deutschland"
+        },
+        "priceRange": "€€",
+        "openingHours": [
+            "Mo-Fr 07:00-19:00",
+            "Sa 08:00-16:00"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Baumdienstleistungen",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Baumfällung",
+                        "description": "Professionelle Baumfällung mit Entsorgung"
+                    }
+                },
+                {
+                    "@type": "Offer", 
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Baumpflege",
+                        "description": "Fachgerechte Baumpflege und Kronenschnitt"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Baumkontrolle",
+                        "description": "Verkehrssicherheitsprüfung und Baumgutachten"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "847",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Klaus Müller"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                },
+                "reviewBody": "Endlich mal ein Anbieter, der sofort sagt, was es kostet! Keine versteckten Kosten, pünktlich und sauber gearbeitet."
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/images/hero-baumkletterer-aktion.webp" as="image">
+    <link rel="preload" href="/images/logo-baumfaeller24.svg" as="image">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <a href="/" aria-label="Baumfäller24 Homepage">
+                        <img src="public/images/logo-baumfaeller24.png" alt="Baumfäller24 Logo" width="180" height="60">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link active" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="/leistungen/" class="nav-link" aria-expanded="false">
+                            Leistungen
+                            <svg class="icon icon-chevron-down" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </a>
+                        <div class="nav-dropdown-menu" role="menu">
+                            <div class="nav-dropdown-grid">
+                                <div class="nav-dropdown-section">
+                                    <h4>Baumfällung</h4>
+                                    <a href="/leistungen/baumfaellung/" role="menuitem">Professionelle Fällung</a>
+                                    <a href="/leistungen/notfall-faellung/" role="menuitem">Notfall-Fällung</a>
+                                    <a href="/leistungen/schwierige-faellungen/" role="menuitem">Schwierige Fällungen</a>
+                                </div>
+                                <div class="nav-dropdown-section">
+                                    <h4>Baumpflege</h4>
+                                    <a href="/leistungen/baumpflege/" role="menuitem">Kronenpflege</a>
+                                    <a href="/leistungen/obstbaumschnitt/" role="menuitem">Obstbaumschnitt</a>
+                                    <a href="/leistungen/totholzentfernung/" role="menuitem">Totholzentfernung</a>
+                                </div>
+                                <div class="nav-dropdown-section">
+                                    <h4>Beratung</h4>
+                                    <a href="/leistungen/baumkontrolle/" role="menuitem">Baumkontrolle</a>
+                                    <a href="/leistungen/baumgutachten/" role="menuitem">Baumgutachten</a>
+                                    <a href="/leistungen/beratung/" role="menuitem">Kostenlose Beratung</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/ueber-uns/" class="nav-link">Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/wissen/" class="nav-link">Wissen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/kontakt/" class="nav-link">Kontakt</a>
+                    </li>
+                </ul>
+
+                <!-- Emergency Contact -->
+                <div class="nav-emergency">
+                    <a href="tel:+49800BAUM24" class="btn-emergency" aria-label="Notfall-Hotline anrufen">
+                        <svg class="icon icon-phone" aria-hidden="true">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        Notfall: 0800-BAUM-24
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="nav-toggle" id="nav-toggle" aria-label="Navigation öffnen" aria-expanded="false">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Ihr Baum macht Ihnen Sorgen?<br>
+                            <span class="text-primary">Wir verstehen das - und helfen sofort.</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Transparente Preise, professionelle Ausführung, 100% Versicherungsschutz.<br>
+                            Über 5.000 Kunden vertrauen bereits auf unsere Expertise.
+                        </p>
+                        
+                        <div class="hero-features">
+                            <div class="hero-feature">
+                                <svg class="icon icon-check text-primary" aria-hidden="true">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                <span>Transparente Preise ohne versteckte Kosten</span>
+                            </div>
+                            <div class="hero-feature">
+                                <svg class="icon icon-check text-primary" aria-hidden="true">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                <span>Professionelle Ausführung nach DIN-Norm</span>
+                            </div>
+                            <div class="hero-feature">
+                                <svg class="icon icon-check text-primary" aria-hidden="true">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                <span>100% Versicherungsschutz für Ihr Eigentum</span>
+                            </div>
+                            <div class="hero-feature">
+                                <svg class="icon icon-check text-primary" aria-hidden="true">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                <span>Kostenlose Erstberatung vor Ort</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-cta">
+                            <a href="#preisrechner" class="btn-primary btn-lg">
+                                <svg class="icon icon-calculator" aria-hidden="true">
+                                    <rect x="4" y="2" width="16" height="20" rx="2"/>
+                                    <line x1="8" y1="6" x2="16" y2="6"/>
+                                    <line x1="8" y1="10" x2="16" y2="10"/>
+                                    <line x1="8" y1="14" x2="16" y2="14"/>
+                                    <line x1="8" y1="18" x2="12" y2="18"/>
+                                </svg>
+                                Kostenloses Angebot in 2 Minuten
+                            </a>
+                            <a href="tel:+49800BAUM24" class="btn-emergency btn-lg">
+                                <svg class="icon icon-phone" aria-hidden="true">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                Notfall? Jetzt anrufen
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <picture>
+                            <source srcset="images/hero-baumkletterer-aktion.jpg" type="image/jpeg">
+                            <img src="public/images/hero-baumkletterer-aktion.jpg" alt="Professioneller Baumkletterer bei der Arbeit mit Sicherheitsausrüstung" width="600" height="400" loading="eager">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="trust-section">
+            <div class="container">
+                <div class="trust-content">
+                    <div class="trust-social-proof">
+                        <p class="trust-text">Über 5.000 zufriedene Kunden vertrauen uns</p>
+                        <div class="trust-rating">
+                            <div class="stars" role="img" aria-label="4,9 von 5 Sternen">
+                                <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                            </div>
+                            <span class="rating-text">4.9/5 (847 Bewertungen)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="trust-certificates">
+                        <img src="/images/ral-guetezeichen.webp" alt="RAL Gütezeichen Baumpflege" width="80" height="80" loading="lazy">
+                        <img src="/images/tuev-zertifikat.webp" alt="TÜV Zertifikat" width="80" height="80" loading="lazy">
+                        <img src="/images/versicherung-logo.webp" alt="Versicherungsnachweis" width="80" height="80" loading="lazy">
+                        <img src="/images/handwerkskammer-logo.webp" alt="Handwerkskammer Mitglied" width="80" height="80" loading="lazy">
+                    </div>
+                    
+                    <div class="trust-guarantees">
+                        <div class="guarantee">
+                            <svg class="icon icon-shield text-primary" aria-hidden="true">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            <span>100% Versicherungsschutz</span>
+                        </div>
+                        <div class="guarantee">
+                            <svg class="icon icon-euro text-primary" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                <path d="M12 17h.01"/>
+                            </svg>
+                            <span>Festpreisgarantie</span>
+                        </div>
+                        <div class="guarantee">
+                            <svg class="icon icon-clock text-primary" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            <span>Pünktlichkeitsgarantie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Solution Section -->
+        <section class="problem-solution">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Diese Sorgen kennen wir - und lösen sie für Sie</h2>
+                    <p class="section-subtitle">Wir verstehen Ihre Bedenken und haben für jedes Problem die passende Lösung</p>
+                </div>
+                
+                <div class="problems-grid">
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg class="icon icon-help-circle" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                <path d="M12 17h.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="problem-title">"Ist mein Baum gefährlich?"</h3>
+                        <p class="problem-description">Sie sind unsicher, ob Ihr Baum eine Gefahr darstellt und was zu tun ist.</p>
+                        <div class="problem-solution-arrow" aria-hidden="true">→</div>
+                        <div class="solution">
+                            <h4 class="solution-title">Kostenlose Sicherheitsprüfung</h4>
+                            <p class="solution-description">Unser Experte begutachtet Ihren Baum kostenfrei und erklärt Ihnen verständlich die Situation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg class="icon icon-euro" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="problem-title">"Was kostet das?"</h3>
+                        <p class="problem-description">Sie möchten wissen, mit welchen Kosten Sie rechnen müssen - ohne böse Überraschungen.</p>
+                        <div class="problem-solution-arrow" aria-hidden="true">→</div>
+                        <div class="solution">
+                            <h4 class="solution-title">Sofortiger Online-Preisrechner</h4>
+                            <p class="solution-description">Erhalten Sie in 2 Minuten eine transparente Kostenschätzung - ohne versteckte Kosten.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg class="icon icon-tool" aria-hidden="true">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <h3 class="problem-title">"Wer macht das professionell?"</h3>
+                        <p class="problem-description">Sie suchen einen vertrauenswürdigen Fachbetrieb, der die Arbeit richtig macht.</p>
+                        <div class="problem-solution-arrow" aria-hidden="true">→</div>
+                        <div class="solution">
+                            <h4 class="solution-title">Zertifizierte Baumpfleger</h4>
+                            <p class="solution-description">Unser Team ist zertifiziert, versichert und hat über 15 Jahre Erfahrung in der Baumpflege.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">So einfach geht's - in nur 3 Schritten zum sicheren Baum</h2>
+                    <p class="section-subtitle">Transparent, unkompliziert und stressfrei für Sie</p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number" aria-hidden="true">1</div>
+                        <div class="step-icon">
+                            <svg class="icon icon-phone" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Anfrage stellen</h3>
+                        <p class="step-description">Sie rufen uns an oder nutzen unseren Online-Rechner. Wir beraten Sie kostenfrei und unverbindlich - auch am Wochenende.</p>
+                    </div>
+                    
+                    <div class="process-arrow" aria-hidden="true">
+                        <svg class="icon icon-arrow-right">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12,5 19,12 12,19"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number" aria-hidden="true">2</div>
+                        <div class="step-icon">
+                            <svg class="icon icon-user-check" aria-hidden="true">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="8.5" cy="7" r="4"/>
+                                <polyline points="17,11 19,13 23,9"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Begutachtung vor Ort</h3>
+                        <p class="step-description">Unser Experte kommt zu Ihnen, begutachtet Ihren Baum gründlich und erstellt ein transparentes Festpreis-Angebot.</p>
+                    </div>
+                    
+                    <div class="process-arrow" aria-hidden="true">
+                        <svg class="icon icon-arrow-right">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12,5 19,12 12,19"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number" aria-hidden="true">3</div>
+                        <div class="step-icon">
+                            <svg class="icon icon-check-circle" aria-hidden="true">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Professionelle Ausführung</h3>
+                        <p class="step-description">Wir führen die Arbeiten termingerecht und sauber aus. Sie können sich entspannen - wir kümmern uns um alles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Price Calculator Section -->
+        <section class="price-calculator-section" id="preisrechner">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sofort-Preisrechner</h2>
+                    <p class="section-subtitle">Erfahren Sie in 2 Minuten, was Ihre Baumarbeiten kosten - transparent und fair</p>
+                </div>
+                
+                <div class="price-calculator-container">
+                    <div class="price-calculator" id="price-calculator">
+                        <!-- Calculator will be loaded via JavaScript -->
+                        <div class="calculator-loading">
+                            <div class="loading-spinner" aria-hidden="true"></div>
+                            <p>Preisrechner wird geladen...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Unsere Leistungen</h2>
+                    <p class="section-subtitle">Professionelle Baumarbeiten für jeden Bedarf</p>
+                </div>
+                
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg class="icon icon-tree-cut" aria-hidden="true">
+                                <path d="M12 2L8 8h8l-4-6z"/>
+                                <path d="M12 8v12"/>
+                                <path d="M8 20h8"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Baumfällung</h3>
+                        <p class="service-description">Sicher und sauber zum Festpreis. Auch schwierige Fällungen in beengten Verhältnissen.</p>
+                        <ul class="service-features">
+                            <li>Professionelle Fälltechnik</li>
+                            <li>Vollständige Entsorgung</li>
+                            <li>Schutz der Umgebung</li>
+                        </ul>
+                        <a href="/leistungen/baumfaellung/" class="btn-secondary">Mehr erfahren</a>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg class="icon icon-tree-care" aria-hidden="true">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v6m0 6v6"/>
+                                <path d="m4.93 4.93 4.24 4.24m5.66 5.66 4.24 4.24"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Baumpflege</h3>
+                        <p class="service-description">Fachgerechte Pflege nach ZTV-Baumpflege für gesunde und schöne Bäume.</p>
+                        <ul class="service-features">
+                            <li>Kronenpflege & -schnitt</li>
+                            <li>Totholzentfernung</li>
+                            <li>Obstbaumschnitt</li>
+                        </ul>
+                        <a href="/leistungen/baumpflege/" class="btn-secondary">Mehr erfahren</a>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg class="icon icon-search" aria-hidden="true">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="m21 21-4.35-4.35"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Baumkontrolle & Gutachten</h3>
+                        <p class="service-description">Rechtssichere Kontrollen und Gutachten für die Verkehrssicherheit Ihrer Bäume.</p>
+                        <ul class="service-features">
+                            <li>Verkehrssicherheitsprüfung</li>
+                            <li>Baumgutachten</li>
+                            <li>Baumkataster</li>
+                        </ul>
+                        <a href="/leistungen/baumkontrolle/" class="btn-secondary">Mehr erfahren</a>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg class="icon icon-plus" aria-hidden="true">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Zusatzleistungen</h3>
+                        <p class="service-description">Rundum-Service für alle Ihre Bedürfnisse rund um Baum und Garten.</p>
+                        <ul class="service-features">
+                            <li>Wurzelstockentfernung</li>
+                            <li>Heckenschnitt</li>
+                            <li>Sturmschadenbeseitigung</li>
+                        </ul>
+                        <a href="/leistungen/zusatzleistungen/" class="btn-secondary">Mehr erfahren</a>
+                    </article>
+                </div>
+                
+                <div class="services-cta">
+                    <a href="/leistungen/" class="btn-primary btn-lg">Alle Leistungen entdecken</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Warum über 5.000 Kunden uns vertrauen</h2>
+                    <p class="section-subtitle">Das macht uns zum besten Partner für Ihre Baumarbeiten</p>
+                </div>
+                
+                <div class="why-grid">
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg class="icon icon-eye" aria-hidden="true">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-title">Transparenz</h3>
+                        <p class="why-description">Als einziger Anbieter zeigen wir Ihnen sofort, was es kostet. Keine versteckten Kosten, keine Überraschungen.</p>
+                    </div>
+                    
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg class="icon icon-zap" aria-hidden="true">
+                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-title">Schnelligkeit</h3>
+                        <p class="why-description">Notfall? Wir sind in 2 Stunden bei Ihnen. Reguläre Termine binnen 48 Stunden.</p>
+                    </div>
+                    
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg class="icon icon-award" aria-hidden="true">
+                                <circle cx="12" cy="8" r="7"/>
+                                <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-title">Qualität</h3>
+                        <p class="why-description">Unsere Baumpfleger sind zertifiziert, versichert und haben über 15 Jahre Erfahrung.</p>
+                    </div>
+                    
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg class="icon icon-shield" aria-hidden="true">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-title">Sicherheit</h3>
+                        <p class="why-description">100% Versicherungsschutz für Ihr Eigentum. Falls doch mal etwas passiert, sind Sie abgesichert.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Das sagen unsere Kunden</h2>
+                    <p class="section-subtitle">Echte Bewertungen von zufriedenen Kunden</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Endlich mal ein Anbieter, der sofort sagt, was es kostet! Keine versteckten Kosten, pünktlich und sauber gearbeitet. Kann ich nur empfehlen."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="public/images/kunde-mueller.jpg" alt="" class="testimonial-avatar" width="48" height="48" loading="lazy">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Klaus Müller</div>
+                                <div class="testimonial-location">Hamburg</div>
+                                <div class="testimonial-rating" role="img" aria-label="5 von 5 Sternen">
+                                    <div class="stars">
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Super schnell einen Termin bekommen und online buchen können. Das Team war professionell und hat alles perfekt gemacht. Gerne wieder!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="public/images/kundin-weber.jpg" alt="" class="testimonial-avatar" width="48" height="48" loading="lazy">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Sarah Weber</div>
+                                <div class="testimonial-location">München</div>
+                                <div class="testimonial-rating" role="img" aria-label="5 von 5 Sternen">
+                                    <div class="stars">
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Nach dem Sturm war unser Baum umgestürzt. Baumfäller24 war in 2 Stunden da und hat alles schnell und sauber beseitigt. Vielen Dank!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="public/images/kundin-hoffmann.jpg" alt="" class="testimonial-avatar" width="48" height="48" loading="lazy">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Andrea Hoffmann</div>
+                                <div class="testimonial-location">Berlin</div>
+                                <div class="testimonial-rating" role="img" aria-label="5 von 5 Sternen">
+                                    <div class="stars">
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                        <svg class="star filled" aria-hidden="true"><use href="#star-icon"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="testimonials-cta">
+                    <a href="/bewertungen/" class="btn-secondary">Alle Bewertungen ansehen</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Knowledge Teaser Section -->
+        <section class="knowledge-teaser">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Wissen, das Ihnen hilft</h2>
+                    <p class="section-subtitle">Praktische Tipps und Ratgeber rund um Baum und Garten</p>
+                </div>
+                
+                <div class="knowledge-grid">
+                    <article class="knowledge-card">
+                        <picture>
+                            <source srcset="/images/blog-kranke-baeume-erkennen.webp" type="image/webp">
+                            <img src="/images/blog-kranke-baeume-erkennen.jpg" alt="Kranke Bäume erkennen" class="knowledge-image" width="300" height="200" loading="lazy">
+                        </picture>
+                        <div class="knowledge-content">
+                            <div class="knowledge-category">Baumgesundheit</div>
+                            <h3 class="knowledge-title">Woran erkenne ich einen kranken Baum?</h3>
+                            <p class="knowledge-excerpt">Diese Warnsignale sollten Sie ernst nehmen und wann Sie einen Experten rufen sollten.</p>
+                            <a href="/wissen/blog/baumgesundheit/kranke-baeume-erkennen/" class="knowledge-link">Weiterlesen</a>
+                        </div>
+                    </article>
+                    
+                    <article class="knowledge-card">
+                        <picture>
+                            <source srcset="/images/blog-baumfaellung-genehmigung.webp" type="image/webp">
+                            <img src="/images/blog-baumfaellung-genehmigung.jpg" alt="Baumfällung Genehmigung" class="knowledge-image" width="300" height="200" loading="lazy">
+                        </picture>
+                        <div class="knowledge-content">
+                            <div class="knowledge-category">Rechtliches</div>
+                            <h3 class="knowledge-title">Brauche ich eine Genehmigung für die Baumfällung?</h3>
+                            <p class="knowledge-excerpt">Wann Sie eine Genehmigung brauchen und wie Sie diese beantragen.</p>
+                            <a href="/wissen/blog/rechtliches/baumfaellung-genehmigung/" class="knowledge-link">Weiterlesen</a>
+                        </div>
+                    </article>
+                    
+                    <article class="knowledge-card">
+                        <picture>
+                            <source srcset="/images/blog-baumschnitt-jahreszeiten.webp" type="image/webp">
+                            <img src="/images/blog-baumschnitt-jahreszeiten.jpg" alt="Baumschnitt Jahreszeiten" class="knowledge-image" width="300" height="200" loading="lazy">
+                        </picture>
+                        <div class="knowledge-content">
+                            <div class="knowledge-category">Saisonales</div>
+                            <h3 class="knowledge-title">Der richtige Zeitpunkt für den Baumschnitt</h3>
+                            <p class="knowledge-excerpt">Wann welche Baumarbeiten durchgeführt werden sollten - unser Jahreskalender.</p>
+                            <a href="/wissen/blog/saisonales/baumschnitt-jahreszeiten/" class="knowledge-link">Weiterlesen</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="knowledge-cta">
+                    <a href="/wissen/" class="btn-primary">Mehr Wissen entdecken</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta">
+            <div class="container">
+                <div class="final-cta-content">
+                    <h2 class="final-cta-title">Bereit für Ihren sorgenfreien Baum?</h2>
+                    <p class="final-cta-subtitle">Lassen Sie uns Ihre Baumprobleme lösen - schnell, professionell und transparent</p>
+                    
+                    <div class="final-cta-options">
+                        <div class="cta-option">
+                            <h3 class="cta-option-title">Sofortiges Angebot</h3>
+                            <p class="cta-option-description">Nutzen Sie unseren Preisrechner für eine sofortige Kostenschätzung</p>
+                            <a href="#preisrechner" class="btn-primary btn-lg">Preis berechnen</a>
+                        </div>
+                        
+                        <div class="cta-option">
+                            <h3 class="cta-option-title">Persönliche Beratung</h3>
+                            <p class="cta-option-description">Sprechen Sie direkt mit unseren Experten</p>
+                            <a href="tel:+49800BAUM24" class="btn-secondary btn-lg">
+                                <svg class="icon icon-phone" aria-hidden="true">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                0800-BAUM-24
+                            </a>
+                        </div>
+                        
+                        <div class="cta-option">
+                            <h3 class="cta-option-title">Notfall-Service</h3>
+                            <p class="cta-option-description">24/7 Hilfe bei Sturmschäden und Notfällen</p>
+                            <a href="tel:+49800BAUM24" class="btn-emergency btn-lg">
+                                <svg class="icon icon-alert-triangle" aria-hidden="true">
+                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                    <line x1="12" y1="9" x2="12" y2="13"/>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                </svg>
+                                Notfall-Hilfe
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="final-cta-info">
+                        <div class="cta-info-item">
+                            <svg class="icon icon-clock text-primary" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            <span>Mo-Fr 7-19 Uhr, Sa 8-16 Uhr</span>
+                        </div>
+                        <div class="cta-info-item">
+                            <svg class="icon icon-phone text-primary" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>Notdienst 24/7 verfügbar</span>
+                        </div>
+                        <div class="cta-info-item">
+                            <svg class="icon icon-map-pin text-primary" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Deutschlandweit im Einsatz</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="/images/logo-baumfaeller24-white.svg" alt="Baumfäller24 Logo" width="160" height="50" loading="lazy">
+                    </div>
+                    <p class="footer-description">
+                        Ihr vertrauensvoller Partner für professionelle Baumarbeiten. 
+                        Transparent, sicher und zuverlässig seit über 15 Jahren.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/baumfaeller24" aria-label="Facebook" rel="noopener">
+                            <svg class="icon icon-facebook" aria-hidden="true">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/baumfaeller24" aria-label="Instagram" rel="noopener">
+                            <svg class="icon icon-instagram" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com/baumfaeller24" aria-label="YouTube" rel="noopener">
+                            <svg class="icon icon-youtube" aria-hidden="true">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                                <polygon points="9.75,15.02 15.5,11.75 9.75,8.48"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Leistungen</h4>
+                    <ul class="footer-links">
+                        <li><a href="/leistungen/baumfaellung/">Baumfällung</a></li>
+                        <li><a href="/leistungen/baumpflege/">Baumpflege</a></li>
+                        <li><a href="/leistungen/baumkontrolle/">Baumkontrolle</a></li>
+                        <li><a href="/leistungen/notfall/">Notfall-Service</a></li>
+                        <li><a href="/leistungen/obstbaumschnitt/">Obstbaumschnitt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="/preisrechner/">Preisrechner</a></li>
+                        <li><a href="/termin-buchen/">Online-Terminbuchung</a></li>
+                        <li><a href="/bewertungen/">Kundenbewertungen</a></li>
+                        <li><a href="/referenzen/">Referenzen</a></li>
+                        <li><a href="/wissen/">Ratgeber</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Unternehmen</h4>
+                    <ul class="footer-links">
+                        <li><a href="/ueber-uns/">Über uns</a></li>
+                        <li><a href="/team/">Unser Team</a></li>
+                        <li><a href="/karriere/">Karriere</a></li>
+                        <li><a href="/presse/">Presse</a></li>
+                        <li><a href="/partner/">Partner werden</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Kontakt</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <svg class="icon icon-phone" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <div>
+                                <div class="contact-label">Kostenlose Hotline</div>
+                                <a href="tel:+49800BAUM24" class="contact-value">0800-BAUM-24</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="icon icon-mail" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <div>
+                                <div class="contact-label">E-Mail</div>
+                                <a href="mailto:info@baumfaeller24.de" class="contact-value">info@baumfaeller24.de</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="icon icon-clock" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            <div>
+                                <div class="contact-label">Servicezeiten</div>
+                                <div class="contact-value">Mo-Fr 7-19 Uhr<br>Sa 8-16 Uhr</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="/impressum/">Impressum</a>
+                    <a href="/datenschutz/">Datenschutz</a>
+                    <a href="/agb/">AGB</a>
+                    <a href="/cookies/">Cookie-Richtlinie</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Baumfäller24. Alle Rechte vorbehalten.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTAs -->
+    <div class="mobile-sticky-cta">
+        <a href="tel:+49800BAUM24" class="mobile-cta-call" aria-label="Jetzt anrufen">
+            <svg class="icon icon-phone" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Anrufen
+        </a>
+        <a href="#preisrechner" class="mobile-cta-quote" aria-label="Angebot anfordern">
+            <svg class="icon icon-calculator" aria-hidden="true">
+                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                <line x1="8" y1="6" x2="16" y2="6"/>
+                <line x1="8" y1="10" x2="16" y2="10"/>
+                <line x1="8" y1="14" x2="16" y2="14"/>
+                <line x1="8" y1="18" x2="12" y2="18"/>
+            </svg>
+            Angebot
+        </a>
+    </div>
+
+    <!-- SVG Icons -->
+    <svg style="display: none;" aria-hidden="true">
+        <defs>
+            <symbol id="star-icon" viewBox="0 0 24 24">
+                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- JavaScript (deferred for performance) -->
+    <script src="main.min.js" defer></script>
+    <script src="price-calculator.js" defer></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: 'Baumfäller24 Homepage',
+            page_location: window.location.href
+        });
+    </script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
 </html>
