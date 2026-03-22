@@ -1,14 +1,747 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Professionelle Baumfällung und Baumpflege in Berlin & Brandenburg. 12 Jahre Erfahrung, moderne Technik, zuverlässiger Service." />
-    <title>Baumfäller24 - Professionelle Baumfällung in Berlin & Brandenburg</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baumfäller24 — Baufeldräumung & Rodungsarbeiten Berlin & Brandenburg</title>
+<meta name="description" content="Professionelle Baufeldräumung, Rodungsarbeiten und Baumfällung in Berlin & Brandenburg. 12+ Jahre Erfahrung, vollversichert, 24h Notdienst. Jetzt beraten lassen.">
+<meta name="keywords" content="Baufeldräumung Berlin, Rodungsarbeiten Brandenburg, Baumfällung Berlin, Stubbenfräsen, Spezialfällung, Notdienst Sturmschaden">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Baumfäller24 — Baufeldräumung & Rodungsarbeiten Berlin & Brandenburg">
+<meta property="og:description" content="Professionelle Baufeldräumung, Rodungsarbeiten und Baumfällung. Bis 5 Hektar/Tag, 50t Krankapazität. 24h Notdienst.">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Baumfäller24">
+
+<!-- Fonts -->
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Baumfäller24",
+  "description": "Professionelle Baufeldräumung, Rodungsarbeiten und Baumfällung in Berlin & Brandenburg. 12+ Jahre Erfahrung, vollversichert, 24h Notdienst.",
+  "url": "https://baumfaeller24.de",
+  "telephone": "+4930659400​49",
+  "email": "info@baumfaeller24.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tongruberweg 13",
+    "addressLocality": "Berlin",
+    "postalCode": "12559",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "52.4176",
+    "longitude": "13.6232"
+  },
+  "areaServed": ["Berlin", "Brandenburg"],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "07:00",
+    "closes": "18:00"
+  },
+  "priceRange": "$$",
+  "image": "",
+  "sameAs": [],
+  "creator": {
+    "@type": "SoftwareApplication",
+    "name": "Perplexity Computer",
+    "url": "https://www.perplexity.ai/computer"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ════════════ WEATHER BANNER ════════════ -->
+<div class="weather-banner" id="weather-banner">
+  <div class="container">
+    <div class="weather-banner__item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+      <span id="weather-temp" class="weather-banner__loading">Wetterdaten werden geladen…</span>
+    </div>
+    <div class="weather-banner__divider" id="weather-divider" style="display:none"></div>
+    <div class="weather-banner__item" id="weather-wind-wrap" style="display:none">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>
+      <span id="weather-wind"></span>
+    </div>
+    <div class="weather-banner__divider" id="weather-divider2" style="display:none"></div>
+    <div class="weather-banner__item" id="weather-condition-wrap" style="display:none">
+      <span>Arbeitsbedingungen:</span>
+      <span id="weather-condition" class="weather-banner__condition"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ NAVIGATION ════════════ -->
+<nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
+  <div class="container">
+    <a href="#" class="nav__logo" aria-label="Baumfäller24 Startseite">
+      <svg class="nav__logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="36" height="36" rx="4" fill="#1a472a"/>
+        <path d="M18 6L26 18H10L18 6Z" fill="#3a8a4f"/>
+        <path d="M18 11L24 21H12L18 11Z" fill="#276738"/>
+        <rect x="16" y="20" width="4" height="10" rx="1" fill="#d97706"/>
+      </svg>
+      <span class="nav__logo-text">Baumfäller24</span>
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="#leistungen" class="nav__link">Leistungen</a></li>
+      <li><a href="#ablauf" class="nav__link">Ablauf</a></li>
+      <li><a href="#faq" class="nav__link">FAQ</a></li>
+      <li><a href="#ueber-uns" class="nav__link">Über uns</a></li>
+      <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+    </ul>
+    <a href="tel:03065940049" class="nav__phone nav__phone-desktop" aria-label="Anrufen: 030 65 94 00 49">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      030 65 94 00 49
+    </a>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="nav__mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#ablauf">Ablauf</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#ueber-uns">Über uns</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a href="tel:03065940049" class="nav__mobile-phone">030 65 94 00 49 anrufen</a>
+  </div>
+</nav>
+
+<!-- ════════════ HERO ════════════ -->
+<section class="hero" id="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__deco" aria-hidden="true">
+    <div class="hero__deco-inner"></div>
+  </div>
+  <div class="container hero__content">
+    <h1 class="hero__claim">Freie Flächen<br>für Ihre Projekte.</h1>
+    <p class="hero__sub">Professionelle Baufeldräumung und Rodungsarbeiten in Berlin&nbsp;&&nbsp;Brandenburg — termingerecht, sicher und umweltgerecht.</p>
+    <div class="hero__ctas">
+      <a href="tel:03065940049" class="btn btn--primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Jetzt anrufen
+      </a>
+      <a href="#kontakt" class="btn btn--outline">Angebot anfordern</a>
+    </div>
+    <div class="hero__badges">
+      <div class="hero__badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <strong>12+ Jahre</strong>&nbsp;Erfahrung
+      </div>
+      <div class="hero__badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+        <strong>Vollversichert</strong>
+      </div>
+      <div class="hero__badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <strong>24h</strong>&nbsp;Notdienst
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ INTRO ════════════ -->
+<section class="section" id="intro">
+  <div class="container">
+    <div class="intro reveal">
+      <div class="intro__text">
+        <div class="section__label">Baufeldräumung & Rodung</div>
+        <h2>Professionelle Baufeldräumung für Bauvorhaben & Infrastruktur</h2>
+        <p>
+          Baumfäller24 ist Ihr erfahrener Partner für großflächige Rodungsarbeiten und Baufeldräumungen im Raum Berlin und Brandenburg. Wir schaffen die Voraussetzungen für Ihre Bauprojekte — ob Wohnungsbau, Gewerbeimmobilien oder Infrastrukturmaßnahmen.
+        </p>
+        <p>
+          Mit modernster Maschinentechnik, einem eingespielten Team und über 12 Jahren Erfahrung im gewerblichen Bereich realisieren wir auch komplexe Projekte termingerecht und nach höchsten Sicherheitsstandards.
+        </p>
+        <div class="intro__stats">
+          <div>
+            <div class="intro__stat-number">5 ha</div>
+            <div class="intro__stat-label">pro Tag Kapazität</div>
+          </div>
+          <div>
+            <div class="intro__stat-number">50 t</div>
+            <div class="intro__stat-label">Krankapazität</div>
+          </div>
+          <div>
+            <div class="intro__stat-number">12+</div>
+            <div class="intro__stat-label">Jahre Erfahrung</div>
+          </div>
+        </div>
+      </div>
+      <div class="intro__image" aria-label="Platzhalter für Foto einer Baufeldräumung"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ LEISTUNGEN ════════════ -->
+<section class="section section--light" id="leistungen">
+  <div class="container">
+    <div class="reveal" style="text-align:center; max-width:640px; margin:0 auto;">
+      <div class="section__label">Unsere Leistungen</div>
+      <h2 class="section__title">Leistungen im Überblick</h2>
+      <p class="section__subtitle" style="margin:0 auto;">Von der großflächigen Rodung bis zum Sturmschaden-Notdienst — wir bieten das komplette Leistungsspektrum für Ihr Projekt.</p>
+    </div>
+    <div class="services__grid">
+      <!-- Service 1 -->
+      <div class="service-card reveal">
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 14V2"/>
+          <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22h0a3.13 3.13 0 0 1-3-3.88Z"/>
+        </svg>
+        <h3 class="service-card__title">Großflächige Rodungsarbeiten</h3>
+        <p class="service-card__text">Fachgerechte Rodung von Waldflächen und Gehölzbeständen bis 5 Hektar pro Tag. Effizient und termingerecht mit schwerem Gerät — auch bei schwierigen Bodenverhältnissen.</p>
+      </div>
+      <!-- Service 2 -->
+      <div class="service-card reveal">
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="6" width="20" height="12" rx="2"/>
+          <path d="M12 12h.01"/>
+          <path d="M17 12h.01"/>
+          <path d="M7 12h.01"/>
+        </svg>
+        <h3 class="service-card__title">Baufeldräumung</h3>
+        <p class="service-card__text">Vollständige Räumung und Vorbereitung von Bauflächen für Wohnungs-, Gewerbe- und Infrastrukturprojekte. Inklusive Entfernung von Bewuchs, Wurzelwerk und Hindernissen.</p>
+      </div>
+      <!-- Service 3 -->
+      <div class="service-card reveal">
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 13V2l8 4-8 4"/>
+          <path d="M20.55 10.23A9 9 0 1 1 8 4.94"/>
+          <path d="M8 10a5 5 0 1 0 8.9 2.02"/>
+        </svg>
+        <h3 class="service-card__title">Baumfällung & Spezialfällungen</h3>
+        <p class="service-card__text">Sichere Fällung von Einzelbäumen und schwierigen Bäumen — auch in beengten Verhältnissen. Seilklettertechnik und Hubarbeitsbühnen bis 50 m Arbeitshöhe.</p>
+      </div>
+      <!-- Service 4 -->
+      <div class="service-card reveal">
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+          <path d="M2 12h20"/>
+        </svg>
+        <h3 class="service-card__title">Wurzelstockentfernung & Stubbenfräsen</h3>
+        <p class="service-card__text">Restlose Entfernung von Wurzelstöcken und Stubben mit leistungsstarken Stubbenfräsen. Für ebene, baubereite Flächen ohne Hindernisse im Erdreich.</p>
+      </div>
+      <!-- Service 5 -->
+      <div class="service-card reveal">
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+          <line x1="12" y1="22.08" x2="12" y2="12"/>
+        </svg>
+        <h3 class="service-card__title">Nachhaltige Verwertung & Entsorgung</h3>
+        <p class="service-card__text">Umweltgerechte Entsorgung und Verwertung des gesamten Schnittguts. Hackschnitzelproduktion, Brennholzaufbereitung und zertifizierte Entsorgungswege.</p>
+      </div>
+      <!-- Service 6 -->
+      <div class="service-card reveal">
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9"/>
+          <polyline points="13 11 9 17 15 17 11 23"/>
+        </svg>
+        <h3 class="service-card__title">24h Sturmschaden-Notdienst</h3>
+        <p class="service-card__text">Rund um die Uhr erreichbar bei Sturmschäden und Notsituationen. Schnelle Erstreaktion, Absicherung gefährdeter Bereiche und sofortige Räumung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ BILDERGALERIE ════════════ -->
+<section class="gallery" aria-label="Projektbilder">
+  <div class="container">
+    <div class="gallery__grid reveal">
+      <div class="gallery__item gallery__item--wide">
+        <img src="./assets/crane-felling.jpg" alt="Kranfällung eines großen Baumes in Wohngebiet Berlin" loading="lazy" width="800" height="597">
+        <div class="gallery__caption">Spezialfällung mit 50t-Kran im Wohngebiet</div>
+      </div>
+      <div class="gallery__item">
+        <img src="./assets/stump-grinding.jpg" alt="Stubbenfräse entfernt Baumstumpf" loading="lazy" width="800" height="597">
+        <div class="gallery__caption">Professionelles Stubbenfräsen</div>
+      </div>
+      <div class="gallery__item">
+        <img src="./assets/wood-chipper.jpg" alt="Industriehäcksler bei der Holzverarbeitung" loading="lazy" width="800" height="597">
+        <div class="gallery__caption">Nachhaltige Holzverwertung vor Ort</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ ABLAUF ════════════ -->
+<section class="section section--green" id="ablauf">
+  <div class="container">
+    <div class="reveal" style="text-align:center; max-width:640px; margin:0 auto;">
+      <div class="section__label">Unser Ablauf</div>
+      <h2 class="section__title">Von der Anfrage bis zur fertigen Fläche</h2>
+      <p class="section__subtitle" style="margin:0 auto;">In 6 klar definierten Schritten bringen wir Ihr Projekt von der ersten Beratung bis zur sauberen Übergabe der geräumten Fläche.</p>
+    </div>
+    <div class="process__steps">
+      <div class="process-step reveal">
+        <div class="process-step__number">01</div>
+        <h3 class="process-step__title">Erstberatung & Begehung</h3>
+        <p class="process-step__text">Kostenlose Vor-Ort-Besichtigung zur Aufnahme des Bestandes, Klärung der Anforderungen und Erstellung eines individuellen Leistungskonzepts.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-step__number">02</div>
+        <h3 class="process-step__title">Angebot & Planung</h3>
+        <p class="process-step__text">Transparente Kalkulation mit festem Pauschalpreis. Abstimmung von Zeitplan, Zufahrtswegen und besonderen Auflagen oder Naturschutzanforderungen.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-step__number">03</div>
+        <h3 class="process-step__title">Genehmigungen & Vorbereitung</h3>
+        <p class="process-step__text">Unterstützung bei der Beantragung erforderlicher Genehmigungen. Einrichtung der Baustelle, Sicherheitsmaßnahmen und Zufahrtsplanung.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-step__number">04</div>
+        <h3 class="process-step__title">Rodung & Räumung</h3>
+        <p class="process-step__text">Durchführung der Rodungs- und Räumungsarbeiten mit modernster Technik. Kontinuierliche Qualitätskontrolle und Dokumentation des Fortschritts.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-step__number">05</div>
+        <h3 class="process-step__title">Entsorgung & Verwertung</h3>
+        <p class="process-step__text">Fachgerechte Entsorgung und nachhaltige Verwertung aller Materialien — vom Hackgut bis zum Wurzelwerk. Vollständig dokumentiert und zertifiziert.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-step__number">06</div>
+        <h3 class="process-step__title">Flächenübergabe</h3>
+        <p class="process-step__text">Abschließende Begehung mit dem Auftraggeber. Protokollierte Übergabe der geräumten, baubereiten Fläche — bereit für den nächsten Bauabschnitt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ NACHHALTIGE ENTSORGUNG ════════════ -->
+<section class="section" id="entsorgung">
+  <div class="container">
+    <div class="disposal reveal">
+      <div>
+        <div class="section__label">Nachhaltige Entsorgung</div>
+        <h2 class="section__title" style="font-size:var(--text-xl);">Umweltgerechte Verwertung aller Materialien</h2>
+        <p class="section__subtitle" style="margin-bottom:var(--space-6);">
+          Bei Baumfäller24 ist die fachgerechte Entsorgung fester Bestandteil jedes Auftrags. Wir trennen, verarbeiten und verwerten — für maximale Nachhaltigkeit und lückenlose Dokumentation.
+        </p>
+        <ul class="disposal__list" role="list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span><strong>Astmaterial & Schnittgut</strong> — Verarbeitung zu Hackschnitzeln für thermische Verwertung</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span><strong>Wurzelstöcke & Stubben</strong> — Zerkleinerung und fachgerechte Entsorgung</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span><strong>Stammholz</strong> — Aufbereitung als Brennholz oder Nutzholz</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span><strong>Altholz & Bauholz</strong> — Sortierung und zertifizierte Entsorgung</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span><strong>Erdmaterial & Bodenaushub</strong> — Prüfung und ordnungsgemäße Verwertung</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span><strong>Grünschnitt</strong> — Kompostierung und Wiederverwertung</span>
+          </li>
+        </ul>
+      </div>
+      <div class="disposal__visual" aria-label="Platzhalter für Foto der nachhaltigen Verwertung"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ FAQ ════════════ -->
+<section class="section section--light" id="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center; max-width:640px; margin:0 auto;">
+      <div class="section__label">Häufig gestellte Fragen</div>
+      <h2 class="section__title">Antworten auf Ihre Fragen</h2>
+      <p class="section__subtitle" style="margin:0 auto;">Die wichtigsten Informationen zu Rodungsarbeiten, Baufeldräumung und unseren Leistungen auf einen Blick.</p>
+    </div>
+    <div class="faq__list">
+      <!-- FAQ 1 -->
+      <div class="faq-item reveal">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Wann darf in Berlin und Brandenburg gerodet werden?</span>
+          <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">
+            Nach dem Bundesnaturschutzgesetz (§ 39) ist die Rodung von Gehölzen grundsätzlich vom 1. Oktober bis zum 28./29. Februar zulässig. Außerhalb dieser Zeit (März bis September) besteht ein Verbot, das dem Schutz von Brutvögeln dient. In begründeten Ausnahmefällen können Genehmigungen durch die zuständige Untere Naturschutzbehörde erteilt werden — zum Beispiel bei Bauvorhaben mit gültiger Baugenehmigung. Wir beraten Sie hierzu gerne im Vorfeld.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 2 -->
+      <div class="faq-item reveal">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Was kostet eine Baufeldräumung?</span>
+          <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">
+            Die Kosten hängen von verschiedenen Faktoren ab: Flächengröße, Art und Dichte des Bewuchses, Zugänglichkeit des Geländes, Entsorgungsaufwand und eventuellen Auflagen. Wir kalkulieren grundsätzlich mit transparenten Pauschalpreisen nach einer Vor-Ort-Besichtigung. So erhalten Sie ein verbindliches Angebot ohne versteckte Nachforderungen. Die Erstbegehung und Angebotserstellung ist kostenlos.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 3 -->
+      <div class="faq-item reveal">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Brauche ich für eine Rodung eine Genehmigung?</span>
+          <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">
+            In der Regel ja. In Berlin gilt die Berliner Baumschutzverordnung, in Brandenburg die jeweilige kommunale Baumschutzsatzung. Je nach Stammumfang, Baumart und Standort kann eine Fällgenehmigung erforderlich sein. Bei großflächigen Rodungen sind häufig weitere Genehmigungen nötig — etwa eine forstrechtliche Genehmigung oder eine Umweltverträglichkeitsprüfung. Wir unterstützen Sie bei allen erforderlichen Anträgen und Abstimmungen mit den Behörden.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 4 -->
+      <div class="faq-item reveal">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Wie lange dauert eine großflächige Rodung?</span>
+          <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">
+            Die Dauer richtet sich nach Flächengröße, Bewuchsdichte und den eingesetzten Maschinen. Mit unserer modernen Technik schaffen wir bis zu 5 Hektar pro Tag bei normaler Bewuchsdichte. Eine Fläche von 1.000 m² kann in der Regel innerhalb eines Arbeitstages vollständig geräumt werden. Komplexere Projekte mit Altholzbestand oder schwierigem Gelände planen wir gemeinsam mit Ihnen im Detail.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 5 -->
+      <div class="faq-item reveal">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Was passiert mit dem Rodungsmaterial?</span>
+          <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">
+            Das gesamte Material wird vor Ort sortiert und einer nachhaltigen Verwertung zugeführt. Stammholz wird als Brenn- oder Nutzholz aufbereitet, Astmaterial zu Hackschnitzeln verarbeitet, Wurzelstöcke fachgerecht entsorgt. Grünschnitt geht in die Kompostierung. Alle Entsorgungswege sind zertifiziert und dokumentiert — so erhalten Sie lückenlose Nachweise für Behörden und Auftraggeber.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 6 -->
+      <div class="faq-item reveal">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Arbeiten Sie auch am Wochenende und an Feiertagen?</span>
+          <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">
+            Ja, nach Absprache sind Wochenend- und Feiertagseinsätze möglich. Besonders bei zeitkritischen Projekten oder wenn Rodungsfristen einzuhalten sind, passen wir unsere Einsatzzeiten flexibel an Ihre Anforderungen an. Unser Sturmschaden-Notdienst ist selbstverständlich rund um die Uhr verfügbar — auch an Sonn- und Feiertagen.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 7 -->
+      <div class="faq-item reveal">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>In welchem Gebiet sind Sie tätig?</span>
+          <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">
+            Unser Haupteinsatzgebiet umfasst Berlin und das gesamte Land Brandenburg. Von unserem Standort in Berlin-Köpenick aus sind wir schnell vor Ort — ob in Potsdam, Cottbus, Frankfurt (Oder) oder im Berliner Umland. Bei größeren Projekten sind wir auch überregional einsatzbereit. Sprechen Sie uns einfach an.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 8 -->
+      <div class="faq-item reveal">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Bieten Sie einen Notdienst für Sturmschäden an?</span>
+          <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">
+            Ja, unser 24-Stunden-Notdienst steht Ihnen rund um die Uhr zur Verfügung. Bei Sturmschäden, umgestürzten Bäumen oder akuter Gefährdung reagieren wir schnellstmöglich — auch nachts und am Wochenende. Rufen Sie uns im Notfall direkt an unter <strong>0163 96 59 847</strong>. Wir sichern den betroffenen Bereich, dokumentieren den Schaden und führen die Räumung durch.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 9 -->
+      <div class="faq-item reveal">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Wie läuft eine Erstberatung ab?</span>
+          <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">
+            Die Erstberatung beginnt mit einem kurzen Telefonat oder einer Anfrage über unser Kontaktformular. Anschließend vereinbaren wir einen Termin für eine kostenlose Vor-Ort-Begehung. Dabei erfassen wir den Baumbestand, die Geländebedingungen und Ihre spezifischen Anforderungen. Innerhalb weniger Werktage erhalten Sie ein detailliertes, verbindliches Angebot mit Festpreis.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 10 -->
+      <div class="faq-item reveal">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Sind Sie vollständig versichert?</span>
+          <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">
+            Ja, selbstverständlich. Baumfäller24 verfügt über eine umfassende Betriebshaftpflichtversicherung, die alle unsere Tätigkeiten abdeckt — einschließlich Personen-, Sach- und Vermögensschäden. Versicherungsnachweise stellen wir Ihnen auf Anfrage gerne zur Verfügung. So sind Sie und Ihr Projekt jederzeit abgesichert.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 11 -->
+      <div class="faq-item reveal">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Welche Maschinen und Fahrzeuge setzen Sie ein?</span>
+          <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">
+            Wir arbeiten mit einem modernen Maschinenpark: Harvester, Forwarder, Radlader, Bagger mit Forstmulcher, leistungsstarke Stubbenfräsen, Hubarbeitsbühnen, Häcksler und Autokrane mit bis zu 50 Tonnen Tragkraft. Die Auswahl der Maschinen erfolgt projektspezifisch — angepasst an Flächengröße, Bewuchsart und Geländebedingungen.
+          </div>
+        </div>
+      </div>
+      <!-- FAQ 12 -->
+      <div class="faq-item reveal">
+        <button class="faq-item__question" aria-expanded="false">
+          <span>Können Sie auch Bäume in der Nähe von Gebäuden fällen?</span>
+          <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-item__answer">
+          <div class="faq-item__answer-inner">
+            Ja, gerade in beengten Verhältnissen liegt eine unserer Kernkompetenzen. Mit Seilklettertechnik, Hubarbeitsbühnen und Autokranen fällen wir Bäume auch direkt neben Gebäuden, Leitungen oder Infrastruktur — kontrolliert, stückweise und ohne Schäden an umliegenden Strukturen. Jede solche Fällung wird im Vorfeld detailliert geplant.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ ÜBER UNS ════════════ -->
+<section class="section" id="ueber-uns">
+  <div class="container">
+    <div class="about reveal">
+      <div class="about__image" aria-label="Platzhalter für Teamfoto"></div>
+      <div>
+        <div class="section__label">Über uns</div>
+        <h2 class="section__title" style="font-size:var(--text-xl);">Erfahrung, Technik und Zuverlässigkeit</h2>
+        <p class="section__subtitle" style="margin-bottom:var(--space-4);">
+          Seit über 12 Jahren realisiert Baumfäller24 Rodungs- und Räumungsprojekte für gewerbliche Auftraggeber in Berlin und Brandenburg. Unser Anspruch: Termine einhalten, Qualität liefern und dabei sicher und nachhaltig arbeiten.
+        </p>
+        <p style="font-size:var(--text-sm); color:var(--color-text-muted); line-height:1.7;">
+          Inhaber Alexander Seidler und sein Team verbinden fundiertes Fachwissen mit modernster Maschinentechnik. Ob großflächige Baufeldräumung oder die Fällung einzelner Problembäume — wir finden für jede Aufgabe die richtige Lösung.
+        </p>
+        <div class="about__trust">
+          <div class="about__trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span>Vollständige Betriebshaftpflichtversicherung</span>
+          </div>
+          <div class="about__trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span>Qualifizierte Fachkräfte mit Zertifizierung</span>
+          </div>
+          <div class="about__trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span>Modernster Maschinenpark</span>
+          </div>
+          <div class="about__trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span>Zertifizierte Entsorgungswege</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ KONTAKT ════════════ -->
+<section class="section section--cream" id="kontakt">
+  <div class="container">
+    <div class="reveal" style="text-align:center; max-width:640px; margin:0 auto;">
+      <div class="section__label">Kontakt</div>
+      <h2 class="section__title">Projekt besprechen</h2>
+      <p class="section__subtitle" style="margin:0 auto;">Sprechen Sie uns an — per Telefon, E-Mail oder über das Kontaktformular. Wir melden uns zeitnah bei Ihnen.</p>
+    </div>
+    <div class="contact__grid">
+      <!-- Contact Info -->
+      <div class="contact__info">
+        <h3>Kontaktdaten</h3>
+        <div class="contact__detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div>
+            <strong>Telefon</strong><br>
+            <a href="tel:03065940049">030 65 94 00 49</a>
+          </div>
+        </div>
+        <div class="contact__detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <div>
+            <strong>Mobil / WhatsApp</strong><br>
+            <a href="tel:01639659847">0163 96 59 847</a>
+          </div>
+        </div>
+        <div class="contact__detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <strong>E-Mail</strong><br>
+            <a href="mailto:info@baumfaeller24.de">info@baumfaeller24.de</a>
+          </div>
+        </div>
+        <div class="contact__detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <strong>Adresse</strong><br>
+            Tongruberweg 13<br>
+            12559 Berlin (Köpenick)
+          </div>
+        </div>
+        <div class="contact__map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9730.05!2d13.62!3d52.42!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a847c9e4f1bbbd%3A0x1!2sBerlin-K%C3%B6penick!5e0!3m2!1sde!2sde!4v1" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Standort Baumfäller24 in Berlin-Köpenick">
+          </iframe>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <div class="form" id="contact-form-wrapper">
+        <div id="form-content">
+          <h3>Angebot anfordern</h3>
+          <form id="contact-form" novalidate>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="vorname" class="form__label">Vorname *</label>
+                <input type="text" id="vorname" name="vorname" class="form__input" required autocomplete="given-name">
+              </div>
+              <div class="form__group">
+                <label for="nachname" class="form__label">Nachname *</label>
+                <input type="text" id="nachname" name="nachname" class="form__input" required autocomplete="family-name">
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="email" class="form__label">E-Mail *</label>
+                <input type="email" id="email" name="email" class="form__input" required autocomplete="email">
+              </div>
+              <div class="form__group">
+                <label for="telefon" class="form__label">Telefon</label>
+                <input type="tel" id="telefon" name="telefon" class="form__input" autocomplete="tel">
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="projekt" class="form__label">Projektbeschreibung *</label>
+              <textarea id="projekt" name="projekt" class="form__textarea" required placeholder="Beschreiben Sie Ihr Projekt: Flächengröße, Art des Bewuchses, gewünschter Zeitraum…"></textarea>
+            </div>
+            <div class="form__checkbox">
+              <input type="checkbox" id="dsgvo" name="dsgvo" required>
+              <label for="dsgvo">
+                Ich stimme der Verarbeitung meiner Daten gemäß der <a href="./datenschutz.html" target="_blank">Datenschutzerklärung</a> zu. Meine Daten werden ausschließlich zur Bearbeitung meiner Anfrage verwendet und nicht an Dritte weitergegeben. *
+              </label>
+            </div>
+            <button type="submit" class="btn btn--green form__submit">Anfrage absenden</button>
+          </form>
+        </div>
+        <div class="form__success" id="form-success">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+          <h4>Vielen Dank für Ihre Anfrage!</h4>
+          <p>Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__brand-logo">
+          <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="36" height="36" rx="4" fill="#1a472a"/>
+            <path d="M18 6L26 18H10L18 6Z" fill="#3a8a4f"/>
+            <path d="M18 11L24 21H12L18 11Z" fill="#276738"/>
+            <rect x="16" y="20" width="4" height="10" rx="1" fill="#d97706"/>
+          </svg>
+          <span class="footer__brand-name">Baumfäller24</span>
+        </div>
+        <p>Professionelle Baufeldräumung, Rodungsarbeiten und Baumfällung in Berlin &amp; Brandenburg. Seit über 12 Jahren Ihr zuverlässiger Partner.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Leistungen</h4>
+        <ul>
+          <li><a href="#leistungen">Rodungsarbeiten</a></li>
+          <li><a href="#leistungen">Baufeldräumung</a></li>
+          <li><a href="#leistungen">Baumfällung</a></li>
+          <li><a href="#leistungen">Stubbenfräsen</a></li>
+          <li><a href="#leistungen">Entsorgung</a></li>
+          <li><a href="#leistungen">Notdienst</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Unternehmen</h4>
+        <ul>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#ablauf">Ablauf</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Kontakt</h4>
+        <ul>
+          <li><a href="tel:03065940049">030 65 94 00 49</a></li>
+          <li><a href="tel:01639659847">0163 96 59 847</a></li>
+          <li><a href="mailto:info@baumfaeller24.de">info@baumfaeller24.de</a></li>
+          <li style="margin-top:var(--space-2); font-size:var(--text-xs); opacity:0.6;">Tongruberweg 13<br>12559 Berlin</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copyright">
+        &copy; 2026 Baumfäller24 — Alexander Seidler. Alle Rechte vorbehalten.
+        &nbsp;|&nbsp; <a href="./impressum.html" style="color:rgba(255,255,255,0.6);">Impressum</a>
+        &nbsp;|&nbsp; <a href="./datenschutz.html" style="color:rgba(255,255,255,0.6);">Datenschutz</a>
+      </div>
+      <div class="footer__attribution">
+        <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./app.js" defer></script>
+</body>
 </html>
